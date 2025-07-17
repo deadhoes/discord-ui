@@ -1,0 +1,153 @@
+/* Discord Style Button Library */
+
+/* Base Button Styles */
+.ds-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 16px;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  outline: none;
+  gap: 6px;
+  font-family: 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* Button Sizes */
+.ds-btn-sm {
+  padding: 8px 12px;
+  font-size: 13px;
+}
+
+.ds-btn-lg {
+  padding: 12px 20px;
+  font-size: 15px;
+}
+
+.ds-btn-block {
+  display: flex;
+  width: 100%;
+}
+
+/* Button Variants */
+.ds-btn-primary {
+  background-color: #5865F2;
+  color: white;
+}
+
+.ds-btn-primary:hover {
+  background-color: #4752C4;
+}
+
+.ds-btn-secondary {
+  background-color: #4F545C;
+  color: white;
+}
+
+.ds-btn-secondary:hover {
+  background-color: #686D73;
+}
+
+.ds-btn-success {
+  background-color: #3BA55C;
+  color: white;
+}
+
+.ds-btn-success:hover {
+  background-color: #2D7D46;
+}
+
+.ds-btn-danger {
+  background-color: #ED4245;
+  color: white;
+}
+
+.ds-btn-danger:hover {
+  background-color: #C03537;
+}
+
+.ds-btn-outline {
+  background-color: transparent;
+  border: 1px solid #4F545C;
+  color: #DCDDDE;
+}
+
+.ds-btn-outline:hover {
+  background-color: rgba(79, 84, 92, 0.1);
+  border-color: #686D73;
+}
+
+/* Button States */
+.ds-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.ds-btn-loading {
+  position: relative;
+  color: transparent !important;
+}
+
+.ds-btn-loading::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: ds-spin 1s linear infinite;
+}
+
+/* Icon Buttons */
+.ds-btn-icon {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.ds-btn-icon-sm {
+  width: 28px;
+  height: 28px;
+}
+
+.ds-btn-icon-lg {
+  width: 36px;
+  height: 36px;
+}
+
+/* Button Group */
+.ds-btn-group {
+  display: inline-flex;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.ds-btn-group .ds-btn {
+  border-radius: 0;
+  margin-left: -1px;
+}
+
+.ds-btn-group .ds-btn:first-child {
+  margin-left: 0;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.ds-btn-group .ds-btn:last-child {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+/* Animations */
+@keyframes ds-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
